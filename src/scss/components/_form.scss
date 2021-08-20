@@ -93,7 +93,10 @@ form {
         justify-content: center;
         padding: 1rem 0;
         
-        .form-control { margin-bottom: .5rem; }
+        .form-control { 
+            margin-bottom: .5rem; 
+            padding: 0;
+        }
 
         label { 
             display: block;
