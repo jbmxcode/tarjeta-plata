@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dashboard">
+	<title>Dashboard</title>
+</head>
+<body class="dashboard">
+	<header aria-label="Main Site Header">
+		<div class="container">
+
+		</div>
+	</header>
+
+	<main id="site_content" class="site-content" aria-label="Main Site Content" tabindex="-1">
+		<section class="section dashboard dashboard-puntos">
+			<div class="container">
+				<div class="section-inner">	
+					<div class="content">
+
+						<div class="content__breadcrumbs">
+							<nav class="breadcrumbs">
+								<ul class="items-list">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="dashboard-puntos.html">Mis Puntos</a></li>
+									<li><a href="dashboard.html">Mi Cuenta</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="content__header">
+							<div class="dashboard-welcome">
+								<div class="summary">
+									<img src="https://source.unsplash.com/yqcEQfxzsE0/68x68" alt="" class="welcome-image">
+									<h2>¡Hola Juan!</h2>
+									<p>Bienvenido</p>
+								</div>
+							</div>
+
+							<div class="dashboard-menu">
+								<nav class="menu">
+									<ul class="items-list">
+										<li>
+											<a href="dashboard.html">
+												<img src="https://via.placeholder.com/60" alt="Icon">
+												Inicio				
+											</a>
+										</li>
+										<li>
+											<a href="dashboard-perfil.html">
+												<img src="https://via.placeholder.com/60" alt="Icon">
+												Mi Perfil
+											</a>
+										</li>
+										<li>
+											<a href="dashboard-puntos.html" class="active">
+												<img src="https://via.placeholder.com/60" alt="Icon">
+												Mis Puntos
+											</a>
+										</li>
+										<li>
+											<a href="dashboard-sorteos.html">
+												<img src="https://via.placeholder.com/60" alt="Icon">
+												Mis Sorteos
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>	
+
+						<div class="content__body">
+							<section class="section puntos-tabs tabs">
+								<div class="section-inner">
+									<nav class="tab-items">
+										<ul class="items-list">
+											<li class="tab-item active" data-name="tab1">Todos</li> 
+											<li class="tab-item" data-name="tab2">Ganados</li>
+											<li class="tab-item" data-name="tab3">Redimidos</li>
+											<li class="tab-item" data-name="tab4">Vencidos</li>
+										</ul>
+									</nav>
+
+									<div class="messages">
+										<button class="action-close">
+											<span class="sr-only">Cerrar</span>
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2zm5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4l-1.6 1.6z" class="icon-close"/></svg>
+										</button>
+										<p class="text">Los puntos ganados pueden tardar unos días en aparecer</p>
+									</div>
+									
+									<div class="tab-panel-container">
+										<div class="tab-panel tab1 active"> 
+											<section class="tab-panel__inner">
+												<div class="tab-panel__header">
+													<div class="filter">
+														<p class="title">Filtrar</p>
+														<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2zM6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2h1.17zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h7.17zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h1.17z" fill="#607d81"/></g></svg>
+														</span>
+													</div>
+													<div class="date">
+														<div class="date-item">
+															<label for="start-all" class="title">Desde</label>
+															<input type="date" id="start-all" name="points-start-all" value="MM/DD/AA">
+														</div>
+														<div class="date-item">
+															<label for="end-all" class="title">Hasta</label>
+															<input type="date" id="end-all" name="points-end-all" value="MM/DD/AA">
+														</div>
+													</div>
+												</div>
+												<div class="tab-panel__body">
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>											
+										</div>
+
+										<div class="tab-panel tab2"> 
+											<section class="tab-panel__inner">
+												<div class="tab-panel__header">
+													<div class="filter">
+														<p class="title">Filtrar</p>
+														<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2zM6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2h1.17zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h7.17zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h1.17z" fill="#607d81"/></g></svg>
+														</span>
+													</div>
+													<div class="date">
+														<div class="date-item">
+															<label for="start-ganados" class="title">Desde</label>
+															<input type="date" id="start-ganados" name="points-start-ganados" value="MM/DD/AA">
+														</div>
+														<div class="date-item">
+															<label for="end-ganados" class="title">Hasta</label>
+															<input type="date" id="end-ganados" name="points-end-ganados" value="MM/DD/AA">
+														</div>
+													</div>
+												</div>
+												<div class="tab-panel__body">
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>											
+										</div>
+
+										<div class="tab-panel tab3"> 
+											<section class="tab-panel__inner">
+												<div class="tab-panel__header">
+													<div class="filter">
+														<p class="title">Filtrar</p>
+														<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2zM6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2h1.17zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h7.17zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h1.17z" fill="#607d81"/></g></svg>
+														</span>
+													</div>
+													<div class="date">
+														<div class="date-item">
+															<label for="start-redimidos" class="title">Desde</label>
+															<input type="date" id="start-redimidos" name="points-start-redimidos" value="MM/DD/AA">
+														</div>
+														<div class="date-item">
+															<label for="end-redimidos" class="title">Hasta</label>
+															<input type="date" id="end-redimidos" name="points-end-redimidos" value="MM/DD/AA">
+														</div>
+													</div>
+												</div>
+												<div class="tab-panel__body">
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>											
+										</div>
+
+										<div class="tab-panel tab4"> 
+											<section class="tab-panel__inner">
+												<div class="tab-panel__header">
+													<div class="filter">
+														<p class="title">Filtrar</p>
+														<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="34" height="34" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2zM6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2h1.17zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h7.17zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h1.17z" fill="#607d81"/></g></svg>
+														</span>
+													</div>
+													<div class="date">
+														<div class="date-item">
+															<label for="start-vencidos" class="title">Desde</label>
+															<input type="date" id="start-vencidos" name="points-start-vencidos" value="MM/DD/AA">
+														</div>
+														<div class="date-item">
+															<label for="end-vencidos" class="title">Hasta</label>
+															<input type="date" id="end-vencidos" name="points-end-vencidos" value="MM/DD/AA">
+														</div>
+													</div>
+												</div>
+												<div class="tab-panel__body">
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="item-content">
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>N° transacción</p>
+																	<p>15485452</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Detalle</p>
+																	<p>SAO Hipodromo</p>
+																	<p>Fecha: 03/06/2020</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Tipo de trasacción</p>
+																	<p>Acumulación</p>
+																</div>
+															</div>
+															<div class="item-col">
+																<div class="item-col__header">
+																	<p>Información</p>
+																	<p>Olímpica s.a.s</p>
+																</div>
+																<div class="item-col__body">
+																	<p>Puntos</p>
+																	<p>5,391</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>											
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<section class="section events-tabs tabs">
+								<div class="section-inner">
+									<nav class="tab-items">
+										<ul class="items-list">
+											<li class="tab-item active" data-name="tab1">Eventos</li> 
+											<li class="tab-item" data-name="tab2">Ganadores</li>
+										</ul>
+									</nav>
+									
+									<div class="tab-panel-container">
+										<div class="tab-panel tab1 active"> 
+											<section class="items-list eventos">
+												<article class="item">
+													<figure class="image">
+														<img src="https://source.unsplash.com/1600x900/?supermarket?1" alt="">
+														<figcaption class="image-text">
+															<p>Válido hasta el 31 de octubre de 2020</p>
+														</figcaption>
+													</figure>
+													<div class="summary">
+														<h2 class="title">Evento Parrilla OLIMPO</h2>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<figure class="image">
+														<img src="https://source.unsplash.com/1600x900/?2" alt="">
+														<figcaption class="image-text">
+															<p>Válido hasta el 31 de octubre de 2020</p>
+														</figcaption>
+													</figure>
+													<div class="summary">
+														<h2 class="title">Evento Parrilla OLIMPO</h2>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<figure class="image">
+														<img src="https://source.unsplash.com/1600x900/?3" alt="">
+														<figcaption class="image-text">
+															<p>Válido hasta el 31 de octubre de 2020</p>
+														</figcaption>
+													</figure>
+													<div class="summary">
+														<h2 class="title">Evento Parrilla OLIMPO</h2>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<figure class="image">
+														<img src="https://source.unsplash.com/1600x900/?4" alt="">
+														<figcaption class="image-text">
+															<p>Válido hasta el 31 de octubre de 2020</p>
+														</figcaption>
+													</figure>
+													<div class="summary">
+														<h2 class="title">Evento Parrilla OLIMPO</h2>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+											</section>
+										</div>
+										<div class="tab-panel tab2">
+											<section class="items-list ganadores">
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+												<article class="item">
+													<div class="summary">
+														<h2 class="title">Nombre del concurso</h2>
+														<h3 class="text">Ganadores Concurso</h3>
+														<div class="action-links">
+															<a href="index.html" class="action-link action-events">Ver más</a>
+														</div>
+													</div>
+												</article>
+											</section> 
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>			
+	</main>
+	
+	<footer aria-label="Main Site Footer">
+		<div class="container">
+			
+		</div>
+	</footer>
+</body>
+</html>

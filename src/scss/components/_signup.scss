@@ -1,0 +1,79 @@
+.signup {
+    .content {
+        max-width: 684px;
+    }
+
+    form { 
+        display: flex;
+        flex-direction: column;
+        max-width: 100%; 
+        overflow: hidden;
+
+        .form-step {
+            width: 100%;
+            flex-shrink: 0;
+            display: none;
+
+            &.active { display: block; }
+        }
+
+        .step1 {
+            // max-width: 384px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .title,
+    .sub-title {
+        max-width: 25rem;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: 400;
+        color: var(--tertiary-color);
+
+        strong {
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    .title { @include scale-font($small-ratio: .5, $mid-ratio: .75, $final-size: 2.3125rem); }
+
+    .sub-title { 
+        @include scale-font($small-ratio: .5, $mid-ratio: .75, $final-size: 1.75rem); 
+        max-width: 33.5rem;
+        margin-top: 2rem;
+    }
+
+    .text {
+        margin: .5rem 0 1rem;
+        font-size: 1.4375rem;
+    }
+
+    .form-control { text-align: left; }
+}
+
+.signup-validation,
+.signup-code {
+    .content__header {
+        .title { max-width: 682px; }
+
+        p { 
+            @include scale-font($small-ratio: .5, $mid-ratio: .75, $final-size: 1.5rem); 
+            font-weight: 700;
+        }
+    }
+
+    form .form-checkbox { 
+        padding: 2rem 0; 
+
+        label { font-size: 1.25rem; }
+    }
+}
+
+.signup-code {
+    .content { max-width: 100%; }
+
+    form { max-width: 25rem; }
+}

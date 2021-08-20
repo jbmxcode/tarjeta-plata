@@ -1,0 +1,13 @@
+.dashboard-perfil {
+    form {
+        max-width: 59.25rem;
+        padding: 2rem 0;
+
+        select { color: var(--grey); }
+
+        @include placeholder {
+            color: var(--grey);
+            opacity: 1;
+        }
+    } 
+}

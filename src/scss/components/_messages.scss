@@ -1,0 +1,11 @@
+.messages {
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: var(--grey-xlight);
+
+    .text { 
+        margin: 0; 
+        text-align: center;
+        color: var(--tertiary-color);
+    }
+}

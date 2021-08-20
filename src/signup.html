@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Signup">
+	<title>Signup</title>
+</head>
+<body>
+	<header aria-label="Main Site Header">
+		<div class="container">
+
+		</div>
+	</header>
+
+	<main id="site_content" class="site-content" aria-label="Main Site Content" tabindex="-1">
+
+		<section class="section form-wrapper signup">
+			<div class="container">
+				<div class="section-inner">
+					<figure class="banner">
+						<img src="images/merca-premios__olimpica.jpg" alt="Banner Principal Merca Premios Olimpica">
+					</figure>	
+					<div class="content">	
+
+						<div class="content__header">			
+							<h2 class="title">Logra tu meta y participa en el sorteo. <strong>Consúltala aquí.</strong></h2>
+							<p class="text">Regístrate</p>
+						</div>
+
+						<form class="content__form form-steps">
+							
+							<fieldset class="form-step active step1">
+								<div class="form-group">
+									<div class="form-control">
+										<select name="type-card">
+											<option selected="true">Tipo de documento</option>
+											<option value="document0">Cédula de ciudadanía</option>
+											<option value="document1">Cédula de extranjería</option>
+											<option value="document2">Otro</option>
+										</select>
+										<small>*Este campo es obligatorio</small>
+									</div>
+									<div class="form-control">
+										<input type="text" name="id-card" id="id-card" placeholder="Número de documento">
+										<small>*Este campo es obligatorio</small>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-group form-buttons">
+										<a href="javascript:history.back()" class="action-link">Volver atrás</a>
+										<button class="action-link next">Siguiente</button>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="form-step step2">
+								<div class="form-group form-column">
+									<div class="form-control">
+										<input type="text" name="fname" id="fname" placeholder="Nombre">
+									</div>
+									<div class="form-control">
+										<input type="text" name="lname" id="lname" placeholder="Apellido">
+									</div>
+								</div>
+								<div class="form-group form-column">
+									<div class="form-control">
+										<input type="tel" name="phone" id="phone" placeholder="Celular">
+									</div>
+									<div class="form-control">
+										<input type="email" name="email" id="email" placeholder="Correo">
+									</div>
+								</div>
+								<div class="form-group form-checkbox">
+									<div class="form-control">
+										<label for="cbox1"><input type="checkbox" id="cbox1" value="cbx1_active"> He leido y acepto las <a href="signup.html">políticas de privacidad</a></label>
+									</div>
+									<div class="form-control">
+										<label for="cbox2"><input type="checkbox" id="cbox2" value="cbx2_active"> He leido y acepto el <a href="signup.html">aviso de privacidad</a></label>
+									</div>
+									<div class="form-control">
+										<label for="cbox3"><input type="checkbox" id="cbox3" value="cbx3_active"> He leido y acepto los <a href="signup.html">términos y condiciones</a></label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-group form-buttons">
+										<button class="action-link prev">Volver atrás</button>
+										<button class="action-link next">Siguiente</button>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="form-step step3">
+								<div class="form-group form-column">
+									<div class="form-control">
+										<input type="password" name="password1" id="password1" placeholder="Contraseña">
+									</div>
+									<div class="form-control">
+										<input type="password" name="password2" id="password2" placeholder="Repetir contraseña">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-group form-buttons">
+										<button class="action-link prev">Volver atrás</button>
+										<!-- <input type="submit" class="action-link submit" value="Regístrate"> -->
+
+										<!-- For testing purposes only -->
+										<a href="signup-validation.html" class="action-link">Regístrate</a>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+	
+						<div class="content__access">
+							<p>¿Estás registrado?</p>
+							<p>Si ya tienes una cuenta <a href="login.html">inicia sesión</a></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+			
+	</main>
+	
+	<footer aria-label="Main Site Footer">
+		<div class="container">
+			
+		</div>
+	</footer>
+</body>
+</html>

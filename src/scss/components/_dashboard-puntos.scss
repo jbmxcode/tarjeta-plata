@@ -1,0 +1,178 @@
+.dashboard-puntos {
+    .puntos-tabs {
+        overflow: hidden;
+
+        .section-inner {
+            padding: 2rem 0;
+            border: 1px solid rgba(0,0,0,.1);
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            border-radius: 1.25rem;
+
+            @media screen and (min-width: $site-width) {
+                max-width: calc(#{$site-width} + 2rem);
+            }
+        }
+
+        .tab-items {               
+            .tab-item {
+                font-weight: 700;
+                text-transform: uppercase;
+                border: 0;
+                border-radius: 0;
+
+                &.active {
+                    border: 0;
+                    border-bottom: 5px solid var(--primary-color);
+                    color: var(--c-text);
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .tab-panel-container .tab-panel { padding: 0; }
+
+        .tab-panel__header {
+            position: relative;
+
+            .title {
+                display: block;
+                margin: 0 0 1rem;
+                font-weight: 500;
+                text-align: center;
+                color: var(--grey-mid);
+            }
+
+            .icon {
+                flex: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-color: var(--grey-xlight);
+                cursor: pointer;
+
+                svg {
+                    width: 34px;
+                    height: 34px;
+                    fill: $grey-mid;
+                }
+            }
+
+            .date {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .date-item {
+                width: 15.1875rem;
+                margin: 0 1rem;
+
+                input {
+                    display: block;
+                    width: 100%;
+                    height: 3.75rem;
+                    padding: 0 2rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    font-family: var(--primary-font);
+                    text-transform: uppercase;
+                    border-radius: 1.875rem;
+                    border: 0;
+                    color: var(--grey);
+                    background-color: var(--grey-xlight);
+                    background-image: url(../images/icons/icon-calendar.svg);
+                    background-position: 90% center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+            }
+
+            @media screen and (min-width: $vp-mid) {
+                display: flex;
+                justify-content: center;
+
+                .icon { margin: 0 auto; }
+
+                .filter {
+                    position: absolute;
+                    top: 50%;
+                    left: 3rem;
+                    transform: translateY(-50%);
+                }
+
+                .date { flex-wrap: nowrap; }
+            }
+        }
+
+        .tab-panel__body { margin-top: 3rem; }
+
+        .item {
+            background-color: var(--grey-xlight);
+
+            &:nth-child(even) {
+                background-color: white;
+            }
+        }
+
+        .item-content {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+
+            .item-col {
+                flex: 1;
+                letter-spacing: .05em;
+
+                &:last-child {
+                    .item-col__body {
+                        p:last-child {
+                            font-size: 2rem;
+                            font-weight: 600;
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    color: var(--grey-mid);
+                }
+            }
+
+            .item-col__header {
+                margin-bottom: 2rem;
+
+                p:last-child {
+                    font-size: 1.25rem;
+                    color: black;
+                }
+            }
+
+            .item-col__body {
+                p:nth-child(2) {
+                    margin: .25rem 0;
+                    font-size: 1.375rem;
+                    color: var(--primary-color);
+                }
+            }
+
+            @media screen and (min-width: $vp-mid) {
+                flex-direction: row;
+                padding: 2rem 3rem;
+
+                .item-col {
+                    text-align: center;
+
+                    &:first-child { text-align: left; }
+                    &:last-child { text-align: right; }
+                }
+            }
+        }
+    }
+}

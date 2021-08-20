@@ -1,0 +1,44 @@
+/**
+ * Helper mixins
+*/
+
+// Media Queries
+
+@mixin res-max($size) {
+  @media screen and (max-width: $size) { @content; }
+}
+
+@mixin res-min($size) {
+  @media screen and (min-width: $size) { @content; }
+}
+
+// Hidden Elements for screen readers
+
+@mixin hidden { 
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+// Font Size Responsive
+
+@mixin scale-font($small-ratio: .5, $mid-ratio: .75, $final-size: 1rem) {
+	font-size: $small-ratio * $final-size;
+
+	@include res-min($vp-mid) { font-size: $mid-ratio * $final-size; }
+	@include res-min($vp-max) { font-size: $final-size; } 
+}
+
+// Placeholder Color
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

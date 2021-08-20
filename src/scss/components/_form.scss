@@ -1,0 +1,227 @@
+.form-wrapper {
+    padding: 3rem 0;
+
+    .section-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > * {
+            flex: none;
+            max-width: 100%;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 3rem 0;
+
+        > * {
+            text-align: center;
+        }
+
+        .title { margin-top: 0; }
+
+        .text { font-weight: 600; }
+    }
+}
+
+form {
+    max-width: 384px;
+    width: 100%;
+    margin: 0 auto;  
+    
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        legend {
+            display: block;
+            margin: 0;
+            padding: .5rem 0 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--tertiary-color);
+        }
+    }
+
+    .form__code {
+        a {
+            display: block;
+            margin-top: .5rem;
+            padding: 0 1.5rem;
+            font-size: .875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &:last-child { 
+                color: var(--grey);
+                text-transform: none;
+                text-decoration: none;
+            }
+
+            &:hover,
+            &:focus {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .form-column {
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 20.875rem), 1fr));
+        gap: 0 1rem;
+
+        .form-control { margin-bottom: 1rem; }
+
+        @media screen and (min-width: $vp-mid) {
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(50% - 2rem)), 1fr));            
+        }
+    }
+
+    .form-checkbox {
+        display: grid;
+        grid-template-columns: max-content;
+        justify-content: center;
+        padding: 1rem 0;
+        
+        .form-control { margin-bottom: .5rem; }
+
+        label { 
+            display: block;
+            max-width: 18.75rem;
+            font-size: .75rem; 
+
+            @media screen and (min-width: $vp-mid) {
+                max-width: 100%;
+            }
+        }
+
+        a { 
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--tertiary-color); 
+        }
+    }
+
+    .form-step {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        font-size: .875rem;
+
+        small { 
+            padding: 0 1.5rem;
+            text-align: left;
+            font-size: .5rem; 
+        }
+
+        a {
+            display: inline-block;
+            margin-top: .5rem;
+            font-weight: 500;
+            color: var(--grey);
+            text-decoration: none;
+            place-self: center;
+
+            &.forgot-link { 
+                display: block;
+                padding: 0 1.5rem;
+                place-self: start;
+                opacity: .5;
+                transition: color .5s;
+            }
+
+            &:hover,
+            &:focus {
+                color: var(--primary-color);
+                opacity: 1;
+            }
+        }
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content: center;
+        
+        > * { margin: .5rem; }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    select {
+        flex: none;
+        display: block;
+        width: 100%;
+        height: 60px;
+        font-size: .875rem;
+        font-family: var(--primary-font);
+        font-weight: 600;
+        padding: 0 1.5rem;
+        border-radius: 1.875rem;
+        border: 1px solid var(--grey-light);
+    }
+
+    select {
+        color: rgba(84, 84, 84, .6);
+    }
+
+    .action-link
+    input[type="submit"] {
+        cursor: pointer;
+    }
+
+    @include placeholder {
+        color: var(--grey);
+        opacity: .6;
+    }
+}
+
+.form-divider {
+    width: 100%;
+    height: 23px;
+    margin: 1rem 0;
+    background-image: url(../images/form-divider.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content__access {
+    padding: 1rem 0;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    > * {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--tertiary-color);
+
+        &:hover,
+        &:focus {
+            color: var(--primary-color);
+        }
+    }
+}

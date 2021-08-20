@@ -1,0 +1,54 @@
+.action-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-link {
+    display: block;
+    max-width: 144px;
+    width: 100%;
+    padding: .75rem 1rem;
+    font-size: .75rem;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    border-radius: 1.875rem;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: black;
+        background-color: var(--secondary-color);
+    }
+
+    &.action-events {
+        padding: .5rem 2rem;
+    }
+}
+
+.action-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: #cbcbcb;
+        transition: fill .5s;
+    }
+
+    &:hover,
+    &:focus {
+        svg { fill: var(--primary-color); }
+    }
+}

@@ -1,0 +1,44 @@
+.dashboard-menu {
+    .items-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    li {
+        display: block;
+        margin: 1rem .5rem;
+        border-radius: 1.25rem;
+        box-shadow: var(--base-shadow);
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 7.875rem;
+            height: 7.875rem;
+            font-size: .75rem;
+            text-align: center;
+            text-decoration: none;
+
+            &.active img { opacity: .5; }
+
+            img {
+                display: block;
+                width: 3.75rem;
+                height: 3.75rem;
+                margin: 0 auto .25rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: $vp-large) {
+        .items-list { 
+            flex-wrap: nowrap; 
+            justify-content: flex-end;
+        }
+
+        li { margin: 1rem; }
+    }
+}
