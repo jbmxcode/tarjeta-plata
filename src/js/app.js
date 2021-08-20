@@ -1,5 +1,5 @@
 import '../scss/app.scss';
 import './components/tabs';
 import './components/modal';
-import './components/steps';
-import './components/actions';
+import './components/form';
+import './components/messages';
