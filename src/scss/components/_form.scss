@@ -163,12 +163,7 @@ form {
         > * { margin: .5rem; }
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    input[type="tel"],
-    select {
+    .form-item {
         flex: none;
         display: block;
         width: 100%;
